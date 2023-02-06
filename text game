@@ -1,0 +1,431 @@
+import os
+from time import sleep 
+
+def start():
+    print("hello, your goal is to find jackson and win a fight \ngood luck")
+    sleep (3)
+    os.system ('clear')
+    print ('welcome to the neighborhood')
+    sleep (2)
+    school()
+
+def school():
+    os.system ('clear')
+    move = input(" where do you want to go?:\n\tinside the school\n\tto the playground\n\tto the crossroads\n")
+    if move.lower() == "inside the school":
+        inside_school()
+    elif move.lower() == "to the playground":
+        playground()
+    elif move.lower() == "to the crossroads":
+        crossroads_A()
+    else:
+        print ('please select a given option')
+        sleep (2)
+        school ()
+        pass
+
+def inside_school():
+    os.system ("clear")
+    print("welcome to abingdon elementary school")
+    sleep (2)
+    os.system ('clear')
+    print ("its the weekend, the doors are locked")
+    sleep (5)
+    return school()
+
+def playground():
+    os.system ('clear')
+    print("welcome to the playground")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tplay\n\tgo back\n")
+    if move.lower() == "play":
+        play()
+        os.system ('clear')
+    elif move.lower() == "go back":
+        school()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        playground()
+        pass
+
+def crossroads_A():
+    os.system ("clear")
+    print("welcome to the crossroads")
+    sleep (2)
+    move = input("\nwhere would you like to go?:\n\tgo on to 1st street\n\tgo on to 2nd street\n\tgo to start\n")
+    if move.lower() == "go on to 1st street":
+        street_1()
+        os.system ('clear')
+    elif move.lower() == "go on to 2nd street":
+        street2()
+        os.system ('clear')
+    elif move.lower() == "go to start":
+        school()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        crossroads_A()
+        pass   
+
+def play():
+    os.system ("clear")
+    print("congrats, you had fun playing!")
+    sleep (2)
+    move = input("\nwhat would you like to do now?:\n\tplay\n\tgo to start\n")
+    if move.lower() == "play":
+        play()
+        os.system ('clear')
+    elif move.lower() == "go to start":
+        school()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep(1.5)
+        playground()
+        pass
+
+def street_1():
+    os.system ("clear")
+    print("welcome to 1st street")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tgo to the pool\n\tgo to the corner\n\tgo to the crossroads\n")
+    if move.lower() == "go to the pool":
+        pool()
+        os.system ('clear')
+    elif move.lower() == "go to the corner":
+        corner()
+        os.system ('clear')
+    elif move.lower() == "go to the crossroads":
+        crossroads_A()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        street_1()
+        pass
+
+def street2():
+    os.system ("clear")
+    print("welcome to 2nd street")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tgo on to 2nd street\n\tgo down the hill\n\tgo to the crossroads\n")
+    if move.lower() == "go on to 2nd street":
+        dead_end()
+        os.system ('clear')
+    elif move.lower() == "go down the hill":
+        down_hill()
+        os.system ('clear')
+    elif move.lower() == "go to the crossroads":
+        crossroads_A()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        street2()
+        pass
+
+def pool():
+    os.system ("clear")
+    print("welcome to the pool")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tget in\n\tgo to jacksons\n\tgo to 1st street\n")
+    if move.lower() == "get in":
+        inside()
+        os.system ('clear')
+    elif move.lower() == "go to jacksons":
+        jacksons()
+        os.system ('clear')
+    elif move.lower() == "go to 1st street":
+        street_1()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        pool()
+        pass
+
+def corner():
+    os.system ("clear")
+    print("welcome to the corner")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tturn to 3rd street\n\tturn to 1st street\n")
+    if move.lower() == "turn to 3rd street":
+        street_3()
+        os.system ('clear')
+    elif move.lower() == "turn to 1st street":
+        street_1()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        corner()
+        pass
+
+def dead_end():
+    os.system ("clear")
+    print("welcome to -")
+    sleep (2)
+    print ("this is a dead end")
+    sleep (2)
+    print ("please turn back")
+    sleep (2)
+    return street2()
+
+def down_hill():
+    os.system ("clear")
+    print("welcome to the bottom of the hill")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tgo home\n\tgo to 7-11\n\tgo up the hill\n")
+    if move.lower() == "go home":
+        home()
+        os.system ('clear')
+    elif move.lower() == "go to 7-11":
+        store()
+        os.system ('clear')
+    elif move.lower() == "go up the hill":
+        street2()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        down_hill()
+        pass
+
+def inside():
+    os.system ("clear")
+    print("welcome to -")
+    sleep (2)
+    print ("this is an empty pool")
+    sleep (2)
+    print ("please get out")
+    sleep (2)
+    return pool()
+
+def street_3():
+    os.system ("clear")
+    print("welcome to 3rd street")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tgo on to 3rd street\n\tgo to jacksons house\n\tgo to the corner\n")
+    if move.lower() == "go on to 3rd street":
+        dead_end2()
+        os.system ('clear')
+    elif move.lower() == "go to jacksons house":
+        jacksons()
+        os.system ('clear')
+    elif move.lower() == "go to the corner":
+        corner()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        street_3()
+        pass
+
+def dead_end2():
+    os.system ("clear")
+    print("welcome to -")
+    sleep (2)
+    print ("this is a dead end")
+    sleep (2)
+    print ("please turn back")
+    sleep (2)
+    return street_3()
+
+def home():
+    os.system ("clear")
+    print("welcome home")
+    sleep (2)
+    move = input("\nwhat would you like to do?:\n\tgo inside\n\tgo to the hill\n")
+    if move.lower() == "go inside":
+        in_home()
+        os.system ('clear')
+    elif move.lower() == "go to the hill":
+        down_hill()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        home()
+        pass
+
+def in_home():
+    os.system ("clear")
+    print("the door is locked")
+    sleep (2)
+    os.system ('clear')
+    print ("you forgot your key.")
+    sleep (2)
+    return home()
+
+def store():
+    global magicremover
+    os.system ("clear")
+    if not magicremover:
+        print("welcome to 7-11")
+        sleep (2)
+        move = input("\nwhat would you like to do?:\n\tbuy a magic remover\n\tbuy candy\n\tleave\n")
+        if move.lower() == "buy a magic remover":
+            magic()
+            os.system ('clear')
+        elif move.lower() == "buy candy":
+            candy()
+            os.system ('clear')
+        elif move.lower() == "leave":
+            down_hill()
+            os.system ('clear')
+        else:
+            print ('please select a given option')
+            sleep (1.5)
+            store()
+            pass
+    if magicremover:
+        print("the store is locked")
+        sleep (2)
+        return down_hill()
+  
+def candy():
+    os.system ("clear")
+    print("you bought candy")
+    sleep (2)
+    print ("enjoy!")
+    sleep (2)
+    return down_hill()
+
+def magic():
+    global magicremover
+    global meetbrita
+    os.system ("clear")
+    print("congratulations you bought a magic remover")
+    sleep (2)
+    magicremover = True
+    if not meetbrita:
+        sleep (1)
+        print ("interesting")
+        sleep (1.5)
+        return down_hill()
+    if meetbrita:
+        sleep (1)
+        print("you can now defeat brita")
+        sleep (2)
+        os.system ('clear')
+        print ("good luck")
+        return down_hill()
+
+def jacksons():
+    global magicremover
+    global meetbrita
+    os.system ("clear")
+    print("welcome to jacksons house")
+    sleep (1)
+    if not magicremover and not meetbrita:
+        print('you found Jackson!!')
+        sleep (2)
+        print ("but theres something happening? you can't fight him right now")
+        sleep (2)
+        print ('he is fighting someone else')
+        sleep (2)
+        os.system ("clear")
+        print ("Its Brita.")
+        sleep (4)
+        print ('you have to remove britas magic to get them to stop fighting so you can fight jackson')
+        sleep (2)
+        print ("there's a magic remover you can buy in the 7-11")
+        sleep (2)
+        meetbrita = True
+        os.system ('clear')
+        return leave_jacksons()
+    elif not magicremover and meetbrita:
+        print ('you have to remove britas magic to get them to stop fighting so you can fight jackson')
+        sleep (2)
+        print ("there's a magic remover you can buy in the 7-11")
+        os.system ("clear")
+        return leave_jacksons()
+    elif magicremover and not meetbrita:
+        print('you found Jackson!!')
+        sleep (2)
+        print ("but theres something happening? you can't fight him right now")
+        sleep (2)
+        print ('he is fighting someone else')
+        sleep (2)
+        os.system ("clear")
+        print ("Its Brita.")
+        sleep (4)
+        print ('but you have a magic remover, you can defeat brita!')
+        sleep (2)
+        meetbrita = True
+        os.system ('clear')
+        return defeat_brita()
+    elif magicremover and meetbrita:
+        print('great you found the magic remover')
+        sleep (2)
+        print("you can defeat brita!")
+        sleep (2)
+        os.system ('clear')
+        return defeat_brita()
+
+def defeat_brita():
+    move = input ("\nnow that you have defeated brita how do you want to fight jackson\n\tfist fight\n\tusing magic\n")
+    if move.lower() == "fist fight":
+        fistfight()
+        os.system ("clear")
+    elif move.lower() == "using magic":
+        magic_fight()
+        os.system ('clear')
+
+def leave_jacksons():
+    move = input("\nwhat do you want to do?:\n\tgo to 3rd street\n\tgo through the shortcut\n")
+    if move.lower() == "go to 3rd street":
+        street_3()
+        os.system ('clear')
+    elif move.lower() == "go through the shortcut":
+        street_1()
+        os.system ('clear')
+    else:
+        print ('please select a given option')
+        sleep (1.5)
+        leave_jacksons()
+        os.system ('clear')
+        pass
+
+def fistfight():
+    print ("jackson is significantly stronger than you")
+    sleep (1)
+    move = input ("\nyou will lose this fight. continue or leave?\n")
+    if move.lower() == "continue":
+        lose()
+        os.system ("clear")
+    elif move.lower() == "leave":
+        defeat_brita()
+        os.system ('clear')
+
+def magic_fight():
+    print('great job! \nyou defeated Jackson')
+    sleep (2)
+    print ("congrats on winning.")
+    sleep (5)
+    return end()
+
+def lose():
+    global magicremover
+    global meetbrita
+    print ("jackson is significantly stronger than you")
+    sleep (1)
+    print ("you lost")
+    magicremover = False
+    meetbrita = False
+    sleep (3)
+    os.system ('clear')
+    return start()
+
+def end():
+    os.system("clear")
+    magicremover = False
+    meetbrita = False
+    print ("congrats on winning.")
+
+magicremover = False
+meetbrita = False
+start()
