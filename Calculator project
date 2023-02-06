@@ -1,0 +1,27 @@
+print("This is a calculator for finding acceleration")
+print('to find acceleration you need to know your initial and final velocity and your time/length.')
+print('if you have a length but no time enter 1, if you have a time but no length enter 2')
+decision = float(input())
+if decision == 1: 
+    print('what is your final velocity?') 
+    final_velocity = float(input())
+    print('what is your initial velocity')
+    initial_velocity = float(input())
+    print ("and what is the length")
+    length = float (input())
+    average_velocity = ((final_velocity * final_velocity) - (initial_velocity * initial_velocity))
+    acceleration = average_velocity / (2 * length)
+    acceleration1= str(acceleration)
+    print('Your acceleration is ' + acceleration1)
+
+elif decision > 1: 
+    print('what is your final velocity?')
+    final_velocity= float(input())
+    print('what is your initial velocity')
+    initial_velocity = float(input())
+    print("and what is the time")
+    time = float(input())
+    average_velocity = (final_velocity - initial_velocity)
+    acceleration = average_velocity / time
+    acceleration1 = str(acceleration)
+    print('Your acceleration is ' + acceleration1)
