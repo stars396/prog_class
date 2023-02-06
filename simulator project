@@ -1,0 +1,50 @@
+import random 
+
+firstguessright = 0
+secondguessright = 0
+thirdguessright = 0 
+fourthguessright = 0 
+fifthguessright = 0
+lastguessright = 0
+
+rolls = 0
+#av amount of guesses b4 guessing dice roll correct
+while rolls < 100: 
+    usernumberchoices = [1,2,3,4,5,6]
+    diceroll = random.randint (1,6)
+    userchoice = random.choice(usernumberchoices)
+    usernumberchoices.remove(userchoice)
+
+    if userchoice == diceroll:
+        firstguessright = firstguessright + 1
+    else: 
+        userchoice = random.choice(usernumberchoices)
+        usernumberchoices.remove(userchoice)
+        if userchoice == diceroll:
+            secondguessright = secondguessright + 1
+        else:
+            userchoice = random.choice(usernumberchoices)
+            usernumberchoices.remove(userchoice)
+            if userchoice == diceroll:
+                thirdguessright = thirdguessright + 1
+            else:
+                userchoice = random.choice (usernumberchoices)
+                usernumberchoices.remove(userchoice)
+                if userchoice == diceroll:
+                    fourthguessright = fourthguessright + 1
+                else: 
+                    userchoice = random.choice (usernumberchoices)
+                    usernumberchoices.remove(userchoice)
+                    if userchoice == diceroll:
+                        fifthguessright = fifthguessright + 1
+                    else:    
+                        lastguessright = lastguessright + 1
+    rolls = rolls + 1
+
+print ("Total Rolls:", rolls)
+print ("Correct Guesses 1st Try:",firstguessright)
+print ("Correct Guesses 2nd Try:",secondguessright)
+print ("Correct Guesses 3rd Try:",thirdguessright)
+print ("Correct Guesses 4th Try:",fourthguessright)
+print ("Correct Guesses 5th Try:",fifthguessright)
+print ("Correct Guesses Last Try:",lastguessright)
